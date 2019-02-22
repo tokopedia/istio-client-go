@@ -29,7 +29,6 @@ generate-code: dev-setup
 		--go-header-file $(BOILERPLATE)
 
 # Verify and/or install dev depenedencies
-#
 dev-setup: Gopkg.toml Gopkg.lock
 	dep ensure --vendor-only
 
