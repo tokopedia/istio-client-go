@@ -20,8 +20,8 @@ limitations under the License.
 package versioned
 
 import (
-	authenticationv1alpha1 "github.com/aspenmesh/istio-client-go/pkg/client/clientset/versioned/typed/authentication/v1alpha1"
-	networkingv1alpha3 "github.com/aspenmesh/istio-client-go/pkg/client/clientset/versioned/typed/networking/v1alpha3"
+	authenticationv1alpha1 "github.com/jekiapp/istio-client-go/pkg/client/clientset/versioned/typed/authentication/v1alpha1"
+	networkingv1alpha3 "github.com/jekiapp/istio-client-go/pkg/client/clientset/versioned/typed/networking/v1alpha3"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"
