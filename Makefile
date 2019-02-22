@@ -21,12 +21,16 @@ GROUP_VERSIONS := "networking:v1alpha3, authentication:v1alpha1"
 
 all: generate-code test
 
-generate-code:
-	../../../k8s.io/code-generator/generate-groups.sh all \
+generate-code: dev-setup
+	./vendor/k8s.io/code-generator/generate-groups.sh all \
 		$(PACKAGE)/pkg/client \
 		$(PACKAGE)/pkg/apis \
 		$(GROUP_VERSIONS) \
 		--go-header-file $(BOILERPLATE)
+
+# Verify and/or install dev depenedencies
+dev-setup: Gopkg.toml Gopkg.lock
+	dep ensure --vendor-only
 
 clean-generated:
 	rm -rf pkg/client
