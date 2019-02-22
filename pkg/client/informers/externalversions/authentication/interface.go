@@ -1,6 +1,6 @@
 /*
-Portions Copyright 2018 The Kubernetes Authors.
-Portions Copyright 2018 Aspen Mesh Authors.
+Portions Copyright 2019 The Kubernetes Authors.
+Portions Copyright 2019 Aspen Mesh Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -20,8 +20,8 @@ limitations under the License.
 package authentication
 
 import (
-	v1alpha1 "github.com/aspenmesh/istio-client-go/pkg/client/informers/externalversions/authentication/v1alpha1"
-	internalinterfaces "github.com/aspenmesh/istio-client-go/pkg/client/informers/externalversions/internalinterfaces"
+	v1alpha1 "github.com/jekiapp/istio-client-go/pkg/client/informers/externalversions/authentication/v1alpha1"
+	internalinterfaces "github.com/jekiapp/istio-client-go/pkg/client/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to each of this group's versions.
