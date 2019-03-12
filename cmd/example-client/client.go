@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	versionedclient "github.com/aspenmesh/istio-client-go/pkg/client/clientset/versioned"
+	versionedclient "github.com/jekiapp/istio-client-go/pkg/client/clientset/versioned"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/tools/clientcmd"
 )
@@ -31,7 +31,7 @@ func main() {
 	}
 	for i := range vsList.Items {
 		vs := vsList.Items[i]
-		log.Printf("Index: %d VirtualService Hosts: %+v\n", i, vs.Spec.GetHosts())
+		log.Printf("Index: %d VirtualService Hosts: %+v\n", i, vs.Spec.Hosts)
 	}
 
 	// Test DestinationRules
