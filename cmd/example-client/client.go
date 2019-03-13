@@ -6,6 +6,7 @@ import (
 
 	versionedclient "github.com/jekiapp/istio-client-go/pkg/client/clientset/versioned"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	_ "k8s.io/client-go/plugin/pkg/client/auth/gcp"
 	"k8s.io/client-go/tools/clientcmd"
 )
 
@@ -41,7 +42,29 @@ func main() {
 	}
 	for i := range drList.Items {
 		dr := drList.Items[i]
-		log.Printf("Index: %d DestinationRule Host: %+v\n", i, dr.Spec.GetHost())
+		log.Printf("Index: %d DestinationRule Host: %+v\n", i, dr.Spec.Host)
+	}
+
+	gwList, err := ic.NetworkingV1alpha3().Gateways(namespace).List(metav1.ListOptions{})
+	if err != nil {
+		log.Fatalf("Failed to get Gateways in %s namespace: %s", namespace, err)
+	}
+
+	i := 0
+	for _, gw := range gwList.Items {
+		for _, server := range gw.Spec.Servers {
+			log.Printf("Index: %d Gateway hosts: %+v\n", i, server.Hosts)
+			i++
+		}
+	}
+
+	seList, err := ic.NetworkingV1alpha3().ServiceEntries(namespace).List(metav1.ListOptions{})
+	if err != nil {
+		log.Fatalf("Failed to get Gateways in %s namespace: %s", namespace, err)
+	}
+
+	for i, se := range seList.Items {
+		log.Printf("Index: %d Service Entry hosts: %+v\n", i, se.Spec.Hosts)
 	}
 
 	// Test Policies
