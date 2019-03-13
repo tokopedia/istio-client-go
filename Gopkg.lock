@@ -2,6 +2,12 @@
 
 
 [[projects]]
+  name = "cloud.google.com/go"
+  packages = ["compute/metadata"]
+  revision = "f52f9bc132541d2aa914f42100c36d10b1ef7e0c"
+  version = "v0.37.0"
+
+[[projects]]
   name = "github.com/davecgh/go-spew"
   packages = ["spew"]
   revision = "8991bc29aa16c548c550c7ff78260e27b9ab7c73"
@@ -24,12 +30,6 @@
   ]
   revision = "ba06b47c162d49f2af050fb4c75bcbc86a159d5c"
   version = "v1.2.1"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/golang/glog"
-  packages = ["."]
-  revision = "23def4e6c14b4da8ac2ed8007337bc5eb5007998"
 
 [[projects]]
   name = "github.com/golang/protobuf"
@@ -149,7 +149,10 @@
   name = "golang.org/x/oauth2"
   packages = [
     ".",
-    "internal"
+    "google",
+    "internal",
+    "jws",
+    "jwt"
   ]
   revision = "9b3c75971fc92dd27c6436a37c05c831498658f1"
 
@@ -211,10 +214,13 @@
 [[projects]]
   name = "google.golang.org/appengine"
   packages = [
+    ".",
     "internal",
+    "internal/app_identity",
     "internal/base",
     "internal/datastore",
     "internal/log",
+    "internal/modules",
     "internal/remote_api",
     "internal/urlfetch",
     "urlfetch"
@@ -236,10 +242,7 @@
 
 [[projects]]
   name = "istio.io/api"
-  packages = [
-    "authentication/v1alpha1",
-    "networking/v1alpha3"
-  ]
+  packages = ["authentication/v1alpha1"]
   revision = "6bf9d6613f65c2754a3d90ae916e1806e9d74175"
   version = "1.0.6"
 
@@ -342,9 +345,11 @@
     "pkg/apis/clientauthentication/v1beta1",
     "pkg/version",
     "plugin/pkg/client/auth/exec",
+    "plugin/pkg/client/auth/gcp",
     "rest",
     "rest/watch",
     "testing",
+    "third_party/forked/golang/template",
     "tools/auth",
     "tools/cache",
     "tools/clientcmd",
@@ -360,6 +365,7 @@
     "util/flowcontrol",
     "util/homedir",
     "util/integer",
+    "util/jsonpath",
     "util/retry"
   ]
   revision = "e64494209f554a6723674bd494d69445fb76a1d4"
@@ -415,6 +421,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "98c9f15f7822f0581e5811e0d42c312d3671ad10b25f9fef878b25e5f3da7abf"
+  inputs-digest = "82f2338e1d82233ac0cedd73414335984586245162564cb0cd4874801a485be3"
   solver-name = "gps-cdcl"
   solver-version = 1
