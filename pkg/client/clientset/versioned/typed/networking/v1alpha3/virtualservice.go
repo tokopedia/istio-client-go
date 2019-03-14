@@ -22,8 +22,8 @@ package v1alpha3
 import (
 	"time"
 
-	v1alpha3 "github.com/jekiapp/istio-client-go/pkg/apis/networking/v1alpha3"
-	scheme "github.com/jekiapp/istio-client-go/pkg/client/clientset/versioned/scheme"
+	v1alpha3 "github.com/tokopedia/istio-client-go/pkg/apis/networking/v1alpha3"
+	scheme "github.com/tokopedia/istio-client-go/pkg/client/clientset/versioned/scheme"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"

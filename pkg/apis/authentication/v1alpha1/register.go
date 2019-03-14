@@ -19,7 +19,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	"github.com/jekiapp/istio-client-go/pkg/apis/authentication"
+	"github.com/tokopedia/istio-client-go/pkg/apis/authentication"
 )
 
 // SchemeGroupVersion is group version used to register these objects

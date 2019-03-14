@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	versionedclient "github.com/jekiapp/istio-client-go/pkg/client/clientset/versioned"
+	versionedclient "github.com/tokopedia/istio-client-go/pkg/client/clientset/versioned"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	_ "k8s.io/client-go/plugin/pkg/client/auth/gcp"
 	"k8s.io/client-go/tools/clientcmd"

@@ -1,4 +1,4 @@
-PACKAGE := github.com/jekiapp/istio-client-go
+PACKAGE := github.com/tokopedia/istio-client-go
 
 ifeq ($(BRANCH_NAME)$(BUILD_ID),)
   BUILDER_TAG := istio-client-go-builder

@@ -20,11 +20,11 @@ limitations under the License.
 package fake
 
 import (
-	clientset "github.com/jekiapp/istio-client-go/pkg/client/clientset/versioned"
-	authenticationv1alpha1 "github.com/jekiapp/istio-client-go/pkg/client/clientset/versioned/typed/authentication/v1alpha1"
-	fakeauthenticationv1alpha1 "github.com/jekiapp/istio-client-go/pkg/client/clientset/versioned/typed/authentication/v1alpha1/fake"
-	networkingv1alpha3 "github.com/jekiapp/istio-client-go/pkg/client/clientset/versioned/typed/networking/v1alpha3"
-	fakenetworkingv1alpha3 "github.com/jekiapp/istio-client-go/pkg/client/clientset/versioned/typed/networking/v1alpha3/fake"
+	clientset "github.com/tokopedia/istio-client-go/pkg/client/clientset/versioned"
+	authenticationv1alpha1 "github.com/tokopedia/istio-client-go/pkg/client/clientset/versioned/typed/authentication/v1alpha1"
+	fakeauthenticationv1alpha1 "github.com/tokopedia/istio-client-go/pkg/client/clientset/versioned/typed/authentication/v1alpha1/fake"
+	networkingv1alpha3 "github.com/tokopedia/istio-client-go/pkg/client/clientset/versioned/typed/networking/v1alpha3"
+	fakenetworkingv1alpha3 "github.com/tokopedia/istio-client-go/pkg/client/clientset/versioned/typed/networking/v1alpha3/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"
